@@ -7,9 +7,17 @@ $the_actor_1 = new Actors(
     'Pattinson'
 );
 
+$genere_1 = new Genre(
+    'Action',
+);
+$genere_2 = new Genre(
+    'Fantastic',
+
+);
+
 $movie_1 = new Movie(
     'Batman',
-    ['Action, Superheros'],
+    $genere_1,
 
     $the_actor_1
 
@@ -22,8 +30,7 @@ $the_actor_2 = new Actors(
 
 $movie_2 = new Movie(
     'Spider-Man',
-    ['Fantastic, Adventure'],
-
+    $genere_2,
     $the_actor_2
 
 );
@@ -32,8 +39,6 @@ $movies = [
     $movie_1,
     $movie_2
 ];
-
-var_dump($movies);
 
 
 ?>

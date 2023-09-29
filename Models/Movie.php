@@ -17,7 +17,7 @@ class Movie
     public function __construct(
 
         string $title,
-        array $generi,
+        Genre $generi,
         Actors $actors,
     ) {
         $this->title = $title;

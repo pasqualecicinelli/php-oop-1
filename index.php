@@ -18,22 +18,21 @@ require_once __DIR__ . '/db.php';
 
 <body>
 
-    <div class="container">
-        <ul class="card">
+    <div class="container mt-5 d-flex flex-nowrap justify-content-center">
+        <ul>
             <?php foreach ($movies as $movie): ?>
-                <li>
-                    <span>Titolo: </span>
-                    <?= $movie->title ?>
-                </li>
+                <li class="card w-40 mt-3 p-2">
+                    <h4>Titolo:
+                        <?= $movie->title ?>
+                    </h4>
 
-                <!--   <li> <span>Genere: </span>
-                    <?php //foreach ($movie as $generi) ?>
-                    <? //= $generi ?>
-                </li>-->
+                    <span>Genere:
+                        <?= $movie->generi->getType(); ?>
+                    </span>
 
-                <li>
-                    <span>Attore: </span>
-                    <?= $movie->actors->getFullName(); ?>
+                    <span>Attore:
+                        <?= $movie->actors->getFullName(); ?>
+                    </span>
                 </li>
             <?php endforeach; ?>
         </ul>
