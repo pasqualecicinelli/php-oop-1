@@ -1,5 +1,8 @@
 <?php
 
+require_once __DIR__ . '/Actors.php';
+require_once __DIR__ . '/Genre.php';
+
 /**
  * ### Class Movie
  */
@@ -15,7 +18,7 @@ class Movie
 
         string $title,
         array $generi,
-        string $actors,
+        Actors $actors,
     ) {
         $this->title = $title;
         $this->generi = $generi;
