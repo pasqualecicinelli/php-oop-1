@@ -21,8 +21,8 @@ class Movie
         Actors $actors,
     ) {
         $this->title = $title;
-        $this->generi = $generi;
-        $this->actors = $actors;
+        $this->Genre = $generi;
+        $this->Actors = $actors;
 
     }
 

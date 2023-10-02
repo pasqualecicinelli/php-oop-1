@@ -7,30 +7,35 @@ $the_actor_1 = new Actors(
     'Pattinson'
 );
 
+$the_actor_2 = new Actors(
+    'Tobey',
+    'Maguire'
+);
+
 $genere_1 = new Genre(
-    'Action',
+    'Action'
 );
 $genere_2 = new Genre(
-    'Fantastic',
+    'Fantastic'
 
 );
 
 $movie_1 = new Movie(
     'Batman',
+
     $genere_1,
 
     $the_actor_1
 
 );
 
-$the_actor_2 = new Actors(
-    'Tobey',
-    'Maguire'
-);
+
 
 $movie_2 = new Movie(
     'Spider-Man',
+
     $genere_2,
+
     $the_actor_2
 
 );

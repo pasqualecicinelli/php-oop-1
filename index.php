@@ -27,11 +27,11 @@ require_once __DIR__ . '/db.php';
                     </h4>
 
                     <span>Genere:
-                        <?= $movie->generi->getType(); ?>
+                        <?= $movie->Genre->type ?>
                     </span>
 
                     <span>Attore:
-                        <?= $movie->actors->getFullName(); ?>
+                        <?= $movie->Actors->getFullName(); ?>
                     </span>
                 </li>
             <?php endforeach; ?>
