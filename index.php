@@ -20,22 +20,37 @@ require __DIR__ . '/db.php';
 <body>
 
     <div class="container mt-5 d-flex flex-nowrap justify-content-center">
-        <ul>
-            <!--       <?php foreach ($movies as $movie): ?>
-                <li class="card w-40 mt-3 p-2">
-                    <h4>Titolo:
-                        <?= $movie->title ?>
-                    </h4>
+        <ul class="list-group p-2">
 
-                    <span>Genere:
-                        <?= $movie->Genre->getType(); ?>
-                    </span>
+            <li class="list-group-item">
+                <h3>Film</h3>
 
-                    <span>Attore:
-                        <?= $movie->Actor->getFullName(); ?>
-                    </span>
-                </li>
-            <?php endforeach; ?> -->
+            </li>
+
+            <?php foreach ($prod_movies as $movie): ?>
+
+            <li class="list-group-item">
+
+                <?= $movie->getDetails(); ?>
+
+            </li>
+            <?php endforeach; ?>
+        </ul>
+
+        <ul class="list-group p-2">
+
+            <li class="list-group-item">
+                <h3>Serie Tv</h3>
+            </li>
+
+            <?php foreach ($prod_Tv_Series as $serieTv): ?>
+
+            <li class="list-group-item">
+
+                <?= $serieTv->getDetails(); ?>
+
+            </li>
+            <?php endforeach; ?>
         </ul>
     </div>
 

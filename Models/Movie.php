@@ -6,6 +6,7 @@
 
 class Movie extends Production
 {
+
     public $published_year;
     public $running_time;
     public function __construct(
@@ -31,7 +32,11 @@ class Movie extends Production
 
     public function getDetails()
     {
-        return "$this->title, $this->generi, $this->actors, $this->published_year, $this->running_time";
+        return "<strong>Titolo:</strong> $this->title <br> 
+        <strong>Generi: </strong>{$this->generi->getType()}<br> 
+        <strong>Attori: </strong> {$this->actors->getFullName()}<br>
+        <strong>Anno di pubblicazione: </strong> $this->published_year <br>
+        <strong>Durata in minuti: </strong> $this->running_time";
     }
 
 }

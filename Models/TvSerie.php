@@ -39,9 +39,13 @@ class TvSerie extends Production
     }
     public function getDetails()
     {
-        return "$this->title, $this->generi, $this->actors, 
-        $this->aired_from_year, $this->aired_to_year, 
-        $this->number_of_episodes, $this->number_of_seasons";
+        return "<strong>Titolo: </strong> $this->title <br>
+        <strong>Generi: </strong> {$this->generi->getType()}<br>
+         <strong>Attori: </strong> {$this->actors->getFullName()},<br>
+        <strong>Messa in onda primo episodio: </strong>$this->aired_from_year<br>
+        <strong>Messa in onda ultimo episodio: </strong> $this->aired_to_year<br> 
+        <strong>Episodio numero: </strong>$this->number_of_episodes<br> 
+        <strong>Stagione numero: </strong>$this->number_of_seasons";
     }
 }
 

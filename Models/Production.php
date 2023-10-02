@@ -17,14 +17,16 @@ class Production
         Actor $actors,
     ) {
         $this->title = $title;
-        $this->Genre = $generi;
-        $this->Actor = $actors;
+        $this->generi = $generi;
+        $this->actors = $actors;
 
     }
 
     public function getDetails()
     {
-        return "$this->title, {$this->generi->getType}, {$this->actors->getFullName}";
+        return "$this->title,
+         {$this->generi->getType()},
+         {$this->actors->getFullName()}";
     }
 }
 
