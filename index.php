@@ -1,6 +1,7 @@
 <?php
 
-require_once __DIR__ . '/db.php';
+require __DIR__ . '/db.php';
+
 
 ?>
 
@@ -20,21 +21,21 @@ require_once __DIR__ . '/db.php';
 
     <div class="container mt-5 d-flex flex-nowrap justify-content-center">
         <ul>
-            <?php foreach ($movies as $movie): ?>
+            <!--       <?php foreach ($movies as $movie): ?>
                 <li class="card w-40 mt-3 p-2">
                     <h4>Titolo:
                         <?= $movie->title ?>
                     </h4>
 
                     <span>Genere:
-                        <?= $movie->Genre->type ?>
+                        <?= $movie->Genre->getType(); ?>
                     </span>
 
                     <span>Attore:
-                        <?= $movie->Actors->getFullName(); ?>
+                        <?= $movie->Actor->getFullName(); ?>
                     </span>
                 </li>
-            <?php endforeach; ?>
+            <?php endforeach; ?> -->
         </ul>
     </div>
 

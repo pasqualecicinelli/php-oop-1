@@ -13,7 +13,10 @@ class Genre
         $this->type = $type;
 
     }
-
+    public function getType()
+    {
+        return "$this->type";
+    }
 }
 
 

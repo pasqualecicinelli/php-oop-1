@@ -1,29 +1,37 @@
 <?php
 
-require_once __DIR__ . '/Actors.php';
-require_once __DIR__ . '/Genre.php';
-
 /**
  * ### Class Movie
  */
 
-class Movie
+class Movie extends Production
 {
-
-    public $title;
-    public $generi;
-    public $actors;
-
+    public $published_year;
+    public $running_time;
     public function __construct(
 
         string $title,
-        Genre $generi,
-        Actors $actors,
-    ) {
-        $this->title = $title;
-        $this->Genre = $generi;
-        $this->Actors = $actors;
 
+        Genre $generi,
+
+        Actor $actors,
+
+        int $published_year,
+
+        int $running_time,
+
+
+    ) {
+        parent::__construct($title, $generi, $actors);
+
+        $this->published_year = $published_year;
+
+        $this->running_time = $running_time;
+    }
+
+    public function getDetails()
+    {
+        return "$this->title, $this->generi, $this->actors, $this->published_year, $this->running_time";
     }
 
 }

@@ -1,10 +1,10 @@
 <?php
 
 /**
- * ### Class Actors
+ * ### Class Actor
  */
 
-class Actors
+class Actor
 {
 
     public $name;
