@@ -19,7 +19,7 @@ class Actor
         $this->surname = $surname;
     }
 
-
+    //Unisco le due stringhe
     public function getFullName()
     {
 

@@ -1,5 +1,7 @@
 <?php
 
+//Percorsi passati al "database"
+
 require __DIR__ . '/Models/Production.php';
 require __DIR__ . '/Models/Movie.php';
 require __DIR__ . '/Models/TvSerie.php';
@@ -8,7 +10,7 @@ require __DIR__ . '/Models/Actor.php';
 
 
 
-
+//Passo i Valori singolarmente
 
 $the_actor_movie_1 = new Actor(
 
@@ -25,11 +27,14 @@ $the_actor_movie_2 = new Actor(
 );
 
 $genere_movie_1 = new Genre(
-    'Action'
+    ['Action']
 );
+
+//Passo i Valori singolarmente
+
 $genere_movie_2 = new Genre(
 
-    'Fantastic'
+    ['Fantastic', 'Action', 'Adventure']
 
 );
 
@@ -47,11 +52,11 @@ $the_actor_STV_2 = new Actor(
 
 $genere_STV_1 = new Genre(
 
-    'Action'
+    ["Caper", "Dramma", "Thriller"]
 );
 $genere_STV_2 = new Genre(
 
-    'Action'
+    ['Action']
 
 );
 
@@ -117,6 +122,7 @@ $movie_2 = new Movie(
 
 );
 
+//Passo tutte le proprietà in un unico array
 
 $prod_movies = [
     $movie_1,

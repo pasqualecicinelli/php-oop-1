@@ -3,7 +3,7 @@
 /**
  * Class TvSerie
  */
-
+//Estendo la classe Production a TvSerie
 class TvSerie extends Production
 {
     public $aired_from_year;
@@ -24,12 +24,14 @@ class TvSerie extends Production
 
         int $aired_from_year,
 
-        int $aired_to_year,
+        int $aired_to_year = null,
 
         int $number_of_episodes,
 
         int $number_of_seasons
     ) {
+        //Passo le proprietà ereditate
+
         parent::__construct($title, $generi, $actors);
 
         $this->aired_from_year = $aired_from_year;
@@ -41,11 +43,11 @@ class TvSerie extends Production
     {
         return "<strong>Titolo: </strong> $this->title <br>
         <strong>Generi: </strong> {$this->generi->getType()}<br>
-         <strong>Attori: </strong> {$this->actors->getFullName()},<br>
+         <strong>Attori: </strong> {$this->actors->getFullName()}<br>
         <strong>Messa in onda primo episodio: </strong>$this->aired_from_year<br>
         <strong>Messa in onda ultimo episodio: </strong> $this->aired_to_year<br> 
-        <strong>Episodio numero: </strong>$this->number_of_episodes<br> 
-        <strong>Stagione numero: </strong>$this->number_of_seasons";
+        <strong>Numero di episodi: </strong>$this->number_of_episodes<br> 
+        <strong>Numero di stagioni: </strong>$this->number_of_seasons";
     }
 }
 

@@ -8,14 +8,18 @@ class Genre
     public $type;
 
     public function __construct(
-        string $type,
+        array $type,
     ) {
         $this->type = $type;
 
     }
+
+    //Prendo l'array e lo trasformo in una stringa
     public function getType()
     {
-        return "$this->type";
+        $newType = implode(', ', $this->type);
+
+        return "$newType";
     }
 }
 
